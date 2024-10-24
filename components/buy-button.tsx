@@ -93,7 +93,6 @@ export default function BuyButton({
       toast.error({
         text: 'Payment Failed ❌',
         description: error instanceof Error ? error.message : 'Unable to process your payment. Please try again.',
-        autoDismiss: false // ensure autoDismiss is set to false
       })
       setLoading(false)
     }
@@ -108,7 +107,7 @@ export default function BuyButton({
       onClick={handleClick}
       disabled={loading}
     >
-      {loading ? 'Processing...' : 'Buy for $9.99'}
+      {loading ? 'Processing...' : 'Buy for $4.99'}
     </Button>
   )
 }

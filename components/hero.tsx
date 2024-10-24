@@ -1,14 +1,12 @@
 "use client";
-import React, { useRef, useEffect, useState } from "react";
+import React, { useRef, useEffect, useState, Suspense } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import { cn } from "@/lib/utils";
 import Balancer from "react-wrap-balancer";
-import { Button } from "./button";
 import { useCalEmbed } from "@/app/hooks/useCalEmbed";
 import { CONSTANTS } from "@/constants/links";
 import BuyButton from '@/components/buy-button'
-import { Toaster } from "@pheralb/toast";
 import VideoModal from "@/components/video-modal";
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -114,11 +112,13 @@ export function Hero() {
         transition={{ duration: 0.2, delay: 0.7 }}
         className="mb-10 mt-8 flex w-full flex-col items-center justify-center gap-4 px-8 sm:flex-row md:mb-20"
       >
-        <BuyButton
-          productId="prod_R5IYfdJ4uIpE6s"
-          variant="dark"
-          className="block w-40 text-center"
-        />
+        <Suspense fallback={<div>Loading...</div>}>
+          <BuyButton
+            productId="prod_R5IYfdJ4uIpE6s"
+            variant="dark"
+            className="block w-40 text-center"
+          />
+        </Suspense>
         <VideoModal />
       </motion.div>
       <motion.div
@@ -229,7 +229,7 @@ const CollisionMechanism = React.forwardRef<
     const animationInterval = setInterval(checkCollision, 50);
 
     return () => clearInterval(animationInterval);
-  }, [cycleCollisionDetected, containerRef]);
+  }, [cycleCollisionDetected, containerRef, parentRef]);
 
   useEffect(() => {
     if (collision.detected && collision.coordinates) {
@@ -247,7 +247,7 @@ const CollisionMechanism = React.forwardRef<
         setBeamKey((prevKey) => prevKey + 1);
       }, 2000);
     }
-  }, [collision]);
+  }, [collision, parentRef]);
 
   return (
     <>

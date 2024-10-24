@@ -24,20 +24,7 @@ interface NavbarProps {
 }
 
 export const Navbar = () => {
-  const navItems = [
-    // {
-    //   name: "Features",
-    //   link: "/#features",
-    // },
-    // {
-    //   name: "Pricing",
-    //   link: "/#pricing",
-    // },
-    // {
-    //   name: "Contact",
-    //   link: "/contact",
-    // },
-  ];
+  const navItems:any[] = [];
 
   const ref = useRef<HTMLDivElement>(null);
   const { scrollY } = useScroll({
