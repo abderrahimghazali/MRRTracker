@@ -11,7 +11,8 @@ export async function POST(req: NextRequest) {
   try {
     // Retrieve the price for the specific product
     const prices = await stripe.prices.list({
-      product: 'prod_R5iMgOdoQmw0B7',
+      product: 'prod_R5ylZltV3859Cj',
+      // product: 'prod_R5iMgOdoQmw0B7',
       limit: 1, // Only need the first price if multiple prices are not used
     });
 
