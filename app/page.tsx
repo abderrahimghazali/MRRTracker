@@ -15,6 +15,7 @@ import {
 import PaymentHandler from "@/components/payment-handler";
 import Footer from "@/components/footer";
 import Header from "@/components/header";
+import ProductHuntBadge from "@/components/product-hunt-badge";
 
 // Initialize Stripe with the publishable key
 const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY as string);
@@ -56,6 +57,10 @@ export default function Home() {
           <section
             className="w-full py-12 md:py-24 lg:py-32 xl:py-24 flex flex-col items-center justify-center">
             <div className="container px-4 md:px-6">
+              <div
+                className="w-full flex flex-col items-center justify-center">
+                <ProductHuntBadge />
+              </div>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <h1
                   className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none">
