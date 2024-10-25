@@ -5,6 +5,8 @@ import { ThemeProvider } from "@/components/theme-provider";
 import { ReactNode } from "react";
 import { Toaster } from "@pheralb/toast";
 import { siteConfig } from "@/config/site";
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from '@vercel/speed-insights/next';
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -94,6 +96,8 @@ export default function RootLayout({ children }: RootLayoutProps) {
       disableTransitionOnChange
     >
       {children}
+      <Analytics />
+      <SpeedInsights />
       <Toaster position="top-right" />
     </ThemeProvider>
     </body>
