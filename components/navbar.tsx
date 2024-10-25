@@ -221,24 +221,12 @@ const MobileNav = ({ navItems, visible }: NavbarProps) => {
                 </Link>
               ))}
               <Button
-                as={Link}
-                onClick={() => setOpen(false)}
-                href={CONSTANTS.LOGIN_LINK}
-                variant="primary"
-                className="block md:hidden w-full"
-              >
-                Login
-              </Button>
-              <Button
-                data-cal-namespace={calOptions.namespace}
-                data-cal-link={`manu-arora-vesr9s/chat-with-manu-demo`}
-                data-cal-config={`{"layout":"${calOptions.layout}"}`}
+                onClick={() => window.open(CONSTANTS.TWITTER_LINK, '_blank')}
                 as="button"
-                onClick={() => setOpen(false)}
                 variant="primary"
                 className="block md:hidden w-full"
               >
-                Book a call
+                Twitter
               </Button>
             </motion.div>
           )}
