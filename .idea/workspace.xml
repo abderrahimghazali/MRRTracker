@@ -4,7 +4,15 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="943352b9-bf95-4273-9664-c0e7bf8e737d" name="Changes" comment="" />
+    <list default="true" id="fb34878c-5e0e-4895-baa6-c06469f86576" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/app/favicon.ico" beforeDir="false" afterPath="$PROJECT_DIR$/app/favicon.ico" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/globals.css" beforeDir="false" afterPath="$PROJECT_DIR$/app/globals.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/layout.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/layout.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/page.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/app/page.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tailwind.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/tailwind.config.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -21,9 +29,9 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="/bin/php" />
   <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 7
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2nlLD4Uh1zO1elU2PeKtGgd5UNV" />
+  <component name="ProjectId" id="2nuaqgHvdsKcKoq5osRA4DGX4s6" />
   <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
@@ -35,22 +43,23 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "last_opened_file_path": "/home/abdel/SideProjects/MRRTracker/public",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/abdel/SideProjects/test_version/mrrtracker/app/api/webhook",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "com.moshuk.aistorm.AppSettingsConfigurable",
-    "ts.external.directory.path": "/home/abdel/SideProjects/MRRTracker/node_modules/typescript/lib",
+    "ts.external.directory.path": "/home/abdel/SideProjects/test_version/mrrtracker/node_modules/typescript/lib",
     "vue.rearranger.settings.migration": "true"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/public" />
+      <recent name="$PROJECT_DIR$/app/api/webhook" />
       <recent name="$PROJECT_DIR$/app" />
+      <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
   <component name="SharedIndexes">
@@ -63,33 +72,17 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="943352b9-bf95-4273-9664-c0e7bf8e737d" name="Changes" comment="" />
-      <created>1729542592375</created>
+      <changelist id="fb34878c-5e0e-4895-baa6-c06469f86576" name="Changes" comment="" />
+      <created>1729825606443</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1729542592375</updated>
-      <workItem from="1729542593414" duration="2492000" />
-      <workItem from="1729677354724" duration="4301000" />
-      <workItem from="1729685788229" duration="7382000" />
-      <workItem from="1729695429690" duration="4165000" />
-      <workItem from="1729702849717" duration="1674000" />
-      <workItem from="1729799020611" duration="2390000" />
-      <workItem from="1729804481122" duration="108000" />
+      <updated>1729825606443</updated>
+      <workItem from="1729825607467" duration="1536000" />
+      <workItem from="1729827201516" duration="6467000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/components/navbar.tsx</url>
-          <line>139</line>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

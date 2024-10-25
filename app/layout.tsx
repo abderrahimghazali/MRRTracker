@@ -1,63 +1,78 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import "./globals.css";
-import { cn } from "@/lib/utils";
-import { Navbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
-import { ThemeProvider } from "@/context/providers";
+import { ThemeProvider } from "@/components/theme-provider";
+import { ReactNode } from "react";
+import { Toaster } from "@pheralb/toast";
+import { siteConfig } from "@/config/site";
 
-import ToasterWrapper from "@/components/toaster-wrapper";
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-montserrat",
+});
 
 export const metadata: Metadata = {
   metadataBase: new URL('https://www.mrrtracker.app/'),
-  title:'MRRTracker',
-  description: 'MRRTracker is a simple macOS app that tracks your Monthly Recurring Revenue (MRR) from your toolbar, providing real-time updates, milestone notifications, and insights in a minimalist interface.',
-  keywords: ["MRRTracker", "MRR tracking", "Stripe", "macOS app", "business tracking", "macOS revenue tracker"],
+  title: siteConfig.name,
+  description: siteConfig.description,
+  keywords: [
+    "MRRTracker",
+    "monthly recurring revenue",
+    "revenue tracking",
+    "business growth",
+    "subscription tracking",
+    "revenue monitoring",
+    "milestone notifications"
+  ],
   openGraph: {
-    title: 'MRRTracker',
-    description: 'MRRTracker is a simple macOS app that tracks your Monthly Recurring Revenue (MRR) from your toolbar, providing real-time updates, milestone notifications, and insights in a minimalist interface.',
-    images: 'https://www.mrrtracker.app/preview.png',
+    title: siteConfig.name,
+    description: siteConfig.description,
+    images: [
+      {
+        url: 'https://www.mrrtracker.app/preview.png',
+        alt: 'MRRTracker App preview',
+      },
+    ],
   },
   twitter: {
-    card:'summary_large_image',
-    title: 'MRRTracker',
-    images: [{
-      url: 'https://www.mrrtracker.app/preview.png',
-      alt: 'A vibrant display of animated emojis showcasing various expressions and motions.',
-    }],
-    description: "MRRTracker is a simple macOS app that tracks your Monthly Recurring Revenue (MRR) from your toolbar, providing real-time updates, milestone notifications, and insights in a minimalist interface.",
+    card: 'summary_large_image',
+    title: siteConfig.name,
+    images: [
+      {
+        url: 'https://www.mrrtracker.app/preview.png',
+        alt: 'MRRTracker App preview',
+      },
+    ],
+    description: siteConfig.description,
   },
   icons: [
     {
-      url: "/logo_2.png",
-      href: "/logo_2.png"
+      url: "/logo.png",
+      href: "/logo.png"
     }
   ]
+};
+
+interface RootLayoutProps {
+  children: ReactNode;
 }
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: RootLayoutProps) {
   return (
-    <html lang="en">
-      <body
-        className={cn("antialiased dark:bg-black bg-white", inter.className)}
-      >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <Navbar />
-          {children}
-          <ToasterWrapper />
-          <Footer />
-        </ThemeProvider>
-      </body>
+    <html lang="en" suppressHydrationWarning className={montserrat.variable}>
+    <head />
+    <body>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="system"
+      enableSystem
+      disableTransitionOnChange
+    >
+      {children}
+      <Toaster position="top-right" />  {/* Add Toaster here */}
+    </ThemeProvider>
+    </body>
     </html>
   );
 }
