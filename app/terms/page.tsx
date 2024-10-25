@@ -35,7 +35,7 @@ export default function TermsOfService() {
         <p className="leading-7 mt-6">
           You agree not to engage in activities that are unlawful, infringe on
           intellectual
-          property rights, or disrupt MRRTracker's operations.
+          property rights, or disrupt MRRTracker&apos;s operations.
         </p>
 
         <h2
@@ -55,7 +55,7 @@ export default function TermsOfService() {
         <p className="leading-7 mt-6">
           MRRTracker is not liable for any damages or losses resulting from your
           use of our
-          platform. All services are provided "as-is."
+          platform. All services are provided &quot;as-is.&quot;
         </p>
 
         <h2
