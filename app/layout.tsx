@@ -29,7 +29,7 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: siteConfig.name,
-    site_name: siteConfig.name,
+    site: siteConfig.name,
     url: 'https://www.mrrtracker.app',
     description: siteConfig.description,
     images: [
