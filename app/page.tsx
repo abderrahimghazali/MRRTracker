@@ -4,7 +4,6 @@ import { useState, Suspense } from 'react';
 import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { PlayCircle, Loader2 } from "lucide-react";
-import { useTheme } from "next-themes";
 import { loadStripe } from '@stripe/stripe-js';
 
 import {
