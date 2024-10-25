@@ -29,6 +29,8 @@ export const metadata: Metadata = {
   ],
   openGraph: {
     title: siteConfig.name,
+    site_name: siteConfig.name,
+    url: 'https://www.mrrtracker.app',
     description: siteConfig.description,
     images: [
       {
@@ -61,6 +63,7 @@ export const metadata: Metadata = {
     }
   ]
 };
+
 
 
 interface RootLayoutProps {
