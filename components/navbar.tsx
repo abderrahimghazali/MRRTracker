@@ -135,7 +135,7 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
           )}
         </AnimatePresence>
         <Button
-          href={CONSTANTS.TWITTER_LINK}
+          onClick={() => window.open(CONSTANTS.TWITTER_LINK, '_blank')}
           as="button"
           variant="primary"
           className="hidden md:block "
