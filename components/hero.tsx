@@ -8,6 +8,8 @@ import { useCalEmbed } from "@/app/hooks/useCalEmbed";
 import { CONSTANTS } from "@/constants/links";
 import BuyButton from '@/components/buy-button'
 import VideoModal from "@/components/video-modal";
+import Link from "next/link";
+import ProductHuntBadge from "@/components/product-hunt-badge";
 export function Hero() {
   const containerRef = useRef<HTMLDivElement>(null);
   const parentRef = useRef<HTMLDivElement>(null);
@@ -67,7 +69,9 @@ export function Hero() {
           repeatDelay: 3,
         }}
       />
-
+      <div className="z-40">
+        <ProductHuntBadge />
+      </div>
       <div className="text-balance relative z-20 mx-auto mb-4 mt-4 max-w-4xl text-center text-3xl font-semibold tracking-tight text-gray-700 dark:text-neutral-300 md:text-7xl">
         <Balancer>
           <motion.h2>
@@ -120,7 +124,9 @@ export function Hero() {
           />
         </Suspense>
         <VideoModal />
+
       </motion.div>
+
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         animate={{ opacity: 1, y: 0 }}
@@ -128,7 +134,8 @@ export function Hero() {
         ref={containerRef}
         className="relative mx-auto max-w-7xl rounded-[32px] border border-neutral-200/50 bg-neutral-100 p-2 backdrop-blur-lg dark:border-neutral-700 dark:bg-neutral-800/50 md:p-4"
       >
-        <div className="rounded-[24px] border border-neutral-200 bg-white p-2 dark:border-neutral-700 dark:bg-black">
+        <div
+          className="rounded-[24px] border border-neutral-200 bg-white p-2 dark:border-neutral-700 dark:bg-black">
           <Image
             src="/main.webp"
             alt="header"
