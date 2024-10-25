@@ -68,25 +68,35 @@ export default function Home() {
                 </p>
                 <div
                   className="flex flex-col md:flex-row space-y-4 md:space-y-0 md:space-x-4 items-center w-full md:w-auto">
-                  <Button
-                    onClick={handleBuy}
-                    className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 text-base font-medium flex items-center justify-center space-x-2 w-full md:w-auto"
-                    disabled={loading} // Disable button while loading
-                  >
-                    {loading ? (
-                      <>
-                        <Loader2 className="animate-spin h-5 w-5"/>
-                        <span>Processing</span>
-                      </>
-                    ) : (
-                      <span>Buy for $4.99</span>
-                    )}
-                  </Button>
+                  {/* Buy Button with macOS 13+ label */}
+                  <div className="relative w-full md:w-auto">
+                    <Button
+                      onClick={handleBuy}
+                      className="bg-primary text-primary-foreground hover:bg-primary/90 px-6 py-3 text-base font-medium flex items-center justify-center space-x-2 w-full" // Added w-full here
+                      disabled={loading} // Disable button while loading
+                    >
+                      {loading ? (
+                        <>
+                          <Loader2 className="animate-spin h-5 w-5"/>
+                          <span>Processing</span>
+                        </>
+                      ) : (
+                        <span>Buy for $4.99</span>
+                      )}
+                    </Button>
+                    {/* Subtle macOS 13+ text with absolute positioning */}
+                    <p
+                      className="text-xs text-gray-500 mt-1 left-1/2 transform -translate-x-1/2 relative md:absolute top-full md:mt-0">
+                      macOS 13+
+                    </p>
+                  </div>
+
+                  {/* Watch Video Button */}
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button
                         variant="outline"
-                        className="bg-background px-6 py-3 text-base font-medium flex items-center justify-center w-full md:w-auto"
+                        className="bg-background px-6 py-3 text-base font-medium flex items-center justify-center w-full md:w-auto" // Added w-full for mobile
                       >
                         <PlayCircle className="mr-2 h-5 w-5"/>
                         Watch Video
@@ -108,6 +118,7 @@ export default function Home() {
                     </DialogContent>
                   </Dialog>
                 </div>
+
 
               </div>
             </div>
@@ -138,7 +149,7 @@ export default function Home() {
             </div>
           </section>
         </main>
-        <Footer />
+        <Footer/>
       </div>
       {/* Wrap PaymentHandler in Suspense */}
       <Suspense fallback={<div>Loading payment status...</div>}>
