@@ -131,26 +131,16 @@ const DesktopNav = ({ navItems, visible }: NavbarProps) => {
                 ease: "easeOut",
               }}
             >
-              <Button
-                as={Link}
-                href={CONSTANTS.TWITTER_LINK}
-                variant="secondary"
-                className="hidden md:block "
-              >
-                Twitter
-              </Button>
             </motion.div>
           )}
         </AnimatePresence>
         <Button
-          data-cal-namespace={calOptions.namespace}
-          data-cal-link={CONSTANTS.CALCOM_LINK}
-          data-cal-config={`{"layout":"${calOptions.layout}"}`}
+          href={CONSTANTS.TWITTER_LINK}
           as="button"
           variant="primary"
           className="hidden md:block "
         >
-          Get started
+          Twitter
         </Button>
       </div>
     </motion.div>
