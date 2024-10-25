@@ -48,11 +48,18 @@ export const metadata: Metadata = {
   },
   icons: [
     {
+      rel: "icon",
       url: "/logo.png",
-      href: "/logo.png"
+      type: "image/png"
+    },
+    {
+      rel: "apple-touch-icon",
+      url: "/logo.png",
+      type: "image/png"
     }
   ]
 };
+
 
 interface RootLayoutProps {
   children: ReactNode;
@@ -61,7 +68,24 @@ interface RootLayoutProps {
 export default function RootLayout({ children }: RootLayoutProps) {
   return (
     <html lang="en" suppressHydrationWarning className={montserrat.variable}>
-    <head />
+    <head>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": siteConfig.name,
+            "url": "https://www.mrrtracker.app",
+            "logo": "https://www.mrrtracker.app/logo.png",
+            "sameAs": [
+              "https://twitter.com/yourTwitter",
+              "https://linkedin.com/in/yourLinkedIn"
+            ]
+          }),
+        }}
+      />
+    </head>
     <body>
     <ThemeProvider
       attribute="class"
@@ -70,7 +94,7 @@ export default function RootLayout({ children }: RootLayoutProps) {
       disableTransitionOnChange
     >
       {children}
-      <Toaster position="top-right" />  {/* Add Toaster here */}
+      <Toaster position="top-right" />
     </ThemeProvider>
     </body>
     </html>
