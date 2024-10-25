@@ -16,7 +16,7 @@ export default function Footer() {
           <Link href="/terms" className="hover:underline">
             Terms of Service
           </Link>
-          <Link href="mailto:support@mrrtracker.app" target="_blank" className="hover:underline">
+          <Link href="mailto:contact@mrrtracker.app" target="_blank" className="hover:underline">
             Contact Us
           </Link>
         </div>

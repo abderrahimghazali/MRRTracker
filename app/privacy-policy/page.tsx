@@ -50,8 +50,8 @@ export default function PrivacyPolicy() {
         <p className="leading-7 mt-6">
           Depending on your location, you may have rights to access, update, or
           delete your
-          data. Contact us at <a href="mailto:support@mrrtracker.app"
-                                 className="font-medium text-primary underline underline-offset-4">support@mrrtracker.app</a>.
+          data. Contact us at <a href="mailto:contact@mrrtracker.app"
+                                 className="font-medium text-primary underline underline-offset-4">contact@mrrtracker.app</a>.
         </p>
 
         <h2
