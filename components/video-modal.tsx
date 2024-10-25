@@ -49,7 +49,7 @@ export default function VideoModal() {
                 leaveFrom="opacity-100 scale-100"
                 leaveTo="opacity-0 scale-95"
               >
-                <Dialog.Panel className="w-full max-w-lg transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
+                <Dialog.Panel className="w-full max-w-5xl transform overflow-hidden rounded-2xl bg-white text-left align-middle shadow-xl transition-all">
                   <div className="">
                     {/* Embed your self-hosted MP4 video */}
                     <div className="aspect-w-16 aspect-h-9">
