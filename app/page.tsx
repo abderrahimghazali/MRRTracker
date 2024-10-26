@@ -52,14 +52,14 @@ export default function Home() {
         <Header/>
         <main className="flex-grow flex flex-col items-center justify-center">
           <div
-            className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px]"></div>
-
+            className="absolute bottom-auto left-auto right-0 top-0 h-[500px] w-[500px] -translate-x-[30%] translate-y-[20%] rounded-full bg-[rgba(173,109,244,0.5)] opacity-50 blur-[80px] pointer-events-none">
+          </div>
           <section
             className="w-full py-12 md:py-24 lg:py-32 xl:py-24 flex flex-col items-center justify-center">
             <div className="container px-4 md:px-6">
               <div
                 className="w-full flex flex-col items-center justify-center">
-                <ProductHuntBadge />
+                <ProductHuntBadge/>
               </div>
               <div className="flex flex-col items-center space-y-4 text-center">
                 <h1
